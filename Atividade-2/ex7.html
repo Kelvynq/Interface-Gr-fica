@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 7</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function calculaMut(){
+                var num= document.getElementById("txtNumeros").value;
+                num= num.split(",");
+                var soma= 0;
+               for(i = 0; i < num.length; i++){
+                    if(num[i] % 2 != 0 && num[i] % 3 == 0){
+                        soma = soma + parseInt(num[i]);
+                    }         
+                }
+                document.write("Soma : " + soma + "<br>");
+            }
+        </script>
+    </head>
+<body>
+        Digite os Numeros: <input type="text" id="txtNumeros">
+        <input type="button" value="Soma dos numeros impares multiplos de 3 " onclick="calculaMut()">
+    </body>
+</html> 

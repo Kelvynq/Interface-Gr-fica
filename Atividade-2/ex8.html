@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 8</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function calFat(){
+                var num= document.getElementById("txtNumeros").value;
+                num= num.split(",");
+                var ax= 1;
+ for (i= 0; i< num.length; i++){
+                    ax= 1;
+                    for(j= num[i]; j > 1; j--){
+                        ax= ax * j;
+                    }
+                    document.write("Fatorial de " + num[i] + ": " + ax + "<br>");
+                }       
+            }
+        </script>
+    </head>
+ <body>
+        Numeros: <input type="text" id="txtNumeros">
+        <input type="button" value="Clique para calcular a fatorial" onclick="calFat()">
+    </body>
+</html>
