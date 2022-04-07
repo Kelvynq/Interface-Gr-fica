@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 9</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+             function calMed(){
+                var num= document.getElementById("txtNumeros").value;
+                num= num.split(",");
+                var pos= 0;
+                var neg= 0;
+                var ax = 0;
+                for (i= 0; i< num.length; i++){
+                    ax= ax + parseInt(num[i]);
+                    if(num[i] > 0){
+                        pos++;
+                    }
+                    else{
+                        neg++;
+                    }
+  }  
+                document.write("Média aritmética: " + ax/(pos + neg) + "<br>");
+                document.write("Quantidade de numeros positivos: " + pos + "<br>");
+                document.write("Quantidade de numeros negativos: " + neg + "<br>");
+                document.write("Percentual de valores positivos: " + (pos/(pos+neg)) * 100 + "<br>");
+                document.write("Percentual de valores negativos: " + (neg/(pos + neg)) * 100 + "<br>");
+            }
+        </script>
+    </head>
+<body>
+        Numeros: <input type="text" id="txtNumeros">
+        <input type="button" value="Clique para calcular a media, quantidade de numeros e percentual" onclick="calMed()">
+    </body>
+
+</html>

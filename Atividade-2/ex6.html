@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 6</title>
+        <meta charset = "UTF-8>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function ordenaNum(){
+                  var num = document.getElementById("txtNumeros").value;
+                  num = num.split(",");
+                  var ax = 0;
+                  for(var i = 0; i < num.length; i++){
+                      for(var j = 0; j < num.length; j++) {
+                           if(num[i] < num[j]){
+                               ax = num[i];
+                               num[i] = num[j];
+                               num[j] = ax;
+                           }
+                      }                        
+                  }           
+                 document.write("Numero em ordem crescente: " + num + "<br>");        
+             }
+         </script>
+    </head>
+    <body>
+       Informe os numeros: <input type="text" id="txtNumeros">
+       <input type="button" value="Clique para ordenar numeros" onclick="ordenaNum()" >
+    </body>
+</html>
